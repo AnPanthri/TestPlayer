@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <title>Videogular</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="js/videogular/videogular.min.css">
+    <link rel="stylesheet" href="js/videogular/main.css">
+    <link rel="stylesheet" href="js/videogular/vg-next-video.css">
+</head>
+<body>
+    <div class="vg-container" ng-app="vgNextVideoApp">
+        <videogular>
+            <vg-media></vg-media>
+
+            <vg-controls>
+                <vg-play-pause-button></vg-play-pause-button>
+                <vg-scrub-bar>
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                </vg-scrub-bar>
+                <vg-time-display>{{timeLeft | date:'mm:ss'}}</vg-time-display>
+                <vg-fullscreen-button></vg-fullscreen-button>
+            </vg-controls>
+
+            <vg-next-video vg-src="'js/videogular/data/media-files.json'" vg-time="3000"></vg-next-video>
+        </videogular>
+    </div>
+
+    <script src="js/videogular/angular/angular.js"></script>
+    <script src="js/videogular/angular/angular-sanitize.js"></script>
+    <script src="js/videogular/angular/roundProgress.min.js"></script>
+
+    <script src="js/videogular/angular/videogular.min.js"></script>
+    <script src="js/videogular/angular/vg-controls.min.js"></script>
+    <script src="js/videogular/angular/vg-poster.min.js"></script>
+
+    <script src="js/videogular/angular/app.js"></script>
+
+    <script src="js/videogular/angular/vg-next-video.js"></script>
+    <script src="js/videogular/angular/vg-next-video-service.js"></script>
+</body>
+</html>
