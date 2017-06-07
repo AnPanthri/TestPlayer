@@ -4,23 +4,30 @@
 <meta charset="UTF-8">
 <title>JWPLAYER</title>
 <script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
+
 </head>
 
 <body>
- 
-<div id="myElement"></div>Loading the player...</div>
-<script type="text/javascript">jwplayer.key="sM5bwEzObqc1yEKsU/t0lEAzi45h9ulZEZetFA==";</script>
   <script type="text/javascript">
 
-    jwplayer("myElement").setup({
-   		file: "http://c-static-dev-int.copart.com/v1/AUTH_svc.ddoc00001/video-temp1/test_m.mov?temp_url_sig=cbfea066fe67c0f7e537c6f3800a6d25ecabb460&temp_url_expires=1496773750", 
-        type: 'mp4',
-        primary: 'flash',
-        width:950,
-        height:600
-    });
+	</script> 
+<div id="myElement"></div>Loading the player...</div>
+ <script type="text/javascript">jwplayer.key="sM5bwEzObqc1yEKsU/t0lEAzi45h9ulZEZetFA==";</script>  
+  <script type="text/javascript">
+   
+ 
+//jw code starts	   
+	       jwplayer("myElement").setup({
+	      		file:"http://c-static-dev-int.copart.com/v1/AUTH_svc.ddoc00001/video-temp/NEWIDS_RECORDING.mp4?temp_url_sig=be701b4e9e493fb6688bf7ed79da6162c6168cf2&temp_url_expires=1497285617", 
+	           type: 'mp4',
+	           primary: 'flash',
+	           width:950,
+	           height:600
+	       });
+	
+   
 </script>  
-
+ 
 <!-- <video controls="controls" width="800" height="600" name="Video Name" src="http://c-static-dev-int.copart.com/v1/AUTH_svc.ddoc00001/video-temp1/test_m.mov?temp_url_sig=5fbc4c7626ad4447e584a0627ea5054b342deea1&temp_url_expires=1496674300"></video> -->
 
 </body>

@@ -1,6 +1,6 @@
 [
   [
-    {"src": "vid/ids.mp4", "type": "video/mp4"}
+    {"src": "http://c-static-dev-int.copart.com/v1/AUTH_svc.ddoc00001/video-temp/NEWIDS_RECORDING.mp4?temp_url_sig=be701b4e9e493fb6688bf7ed79da6162c6168cf2&temp_url_expires=1497285617", "type": "video/mp4"}
   ],
   [
     {"src": "http://c-static-dev-int.copart.com/v1/AUTH_svc.ddoc00001/video-temp1/test_m.mov?temp_url_sig=cbfea066fe67c0f7e537c6f3800a6d25ecabb460&temp_url_expires=1496773750", "type": "video/mp4"}
