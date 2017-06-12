@@ -17,12 +17,12 @@ import net.bramp.ffmpeg.probe.FFmpegStream;
 public class PlayerApplication {
 
 	public static void main(String[] args) {
- //SpringApplication.run(PlayerApplication.class, args);
+//  SpringApplication.run(PlayerApplication.class, args);
 		
 	String filepath="C:/Users/anpanthri/Desktop/vids/6_9.1/test/car.mov";
- //		getVideoInfo(filepath);
+ 		getVideoInfo(filepath);
 		
- 	convertVideo(filepath);
+ //	convertVideo(filepath);
 		
 		
 		
@@ -83,7 +83,7 @@ public class PlayerApplication {
 		  .setInput(filepath)    // Filename, or a FFmpegProbeResult
 		  .overrideOutputFiles(true) // Override the output if it exists
 
-		  .addOutput("C:/Users/anpanthri/Desktop/vids/6_9.1/test/car_mp.mp4")   // Filename for the destination
+		  .addOutput("C:/Users/anpanthri/Desktop/vids/6_9.1/test/new_car_mp.mp4")   // Filename for the destination
 		    .setFormat("mp4")        // Format is inferred from filename, or can be set
 		      // Aim for a 250KB file
 
