@@ -17,12 +17,13 @@ import net.bramp.ffmpeg.probe.FFmpegStream;
 public class PlayerApplication {
 
 	public static void main(String[] args) {
-//  SpringApplication.run(PlayerApplication.class, args);
+   SpringApplication.run(PlayerApplication.class, args);
 		
-	String filepath="C:/Users/anpanthri/Desktop/vids/6_9.1/test/car.mov";
- 		getVideoInfo(filepath);
+ // String filepath="C:/Users/anpanthri/Desktop/vids/6_9.1/test/car.mov";
+ 	// getVideoInfo(filepath);
 		
- //	convertVideo(filepath);
+ //  convertVideo(filepath);
+//  convertStream(filepath);
 		
 		
 		
@@ -60,6 +61,51 @@ public class PlayerApplication {
 		);
 		
 	}
+	
+	private static void convertStream(String filepath){
+		
+		Long stime=System.nanoTime();
+		FFmpeg ffmpeg = null;
+		try {
+			ffmpeg = new FFmpeg("C:/ffmpeg/bin/ffmpeg");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		FFprobe ffprobe =null;
+		try {
+			ffprobe = new FFprobe("C:/ffmpeg/bin/ffprobe");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		FFmpegBuilder builder = new FFmpegBuilder()
+
+		  .setInput(filepath)    // Filename, or a FFmpegProbeResult
+		  .overrideOutputFiles(true) // Override the output if it exists
+
+		  .addOutput("C:/Users/anpanthri/Desktop/vids/6_9.1/test/latest_car_mp.m3u8")   // Filename for the destination
+		    .setFormat("m3u8")        // Format is inferred from filename, or can be set
+
+		    .setVideoResolution(1280,720)
+
+		    .setStrict(FFmpegBuilder.Strict.EXPERIMENTAL) // Allow FFmpeg to use experimental specs
+		    .done();
+		
+
+		FFmpegExecutor executor = new FFmpegExecutor(ffmpeg, ffprobe);
+
+		// Run a one-pass encode
+		executor.createJob(builder).run();
+
+		// Or run a two-pass encode (which is slower at the cost of better quality)
+	//	executor.createTwoPassJob(builder).run();
+		Long etime=System.nanoTime();
+		System.out.println("TIME TAKEN FOR CONVERSION IS:"+(etime-stime)/1000000000);
+		
+		
+	}
 
 	private static void convertVideo(String filepath) {
 		Long stime=System.nanoTime();
@@ -83,7 +129,7 @@ public class PlayerApplication {
 		  .setInput(filepath)    // Filename, or a FFmpegProbeResult
 		  .overrideOutputFiles(true) // Override the output if it exists
 
-		  .addOutput("C:/Users/anpanthri/Desktop/vids/6_9.1/test/new_car_mp.mp4")   // Filename for the destination
+		  .addOutput("C:/Users/anpanthri/Desktop/vids/6_9.1/test/latest_car_mp.mp4")   // Filename for the destination
 		    .setFormat("mp4")        // Format is inferred from filename, or can be set
 		      // Aim for a 250KB file
 
@@ -103,6 +149,7 @@ public class PlayerApplication {
 
 		    .setStrict(FFmpegBuilder.Strict.EXPERIMENTAL) // Allow FFmpeg to use experimental specs
 		    .done();
+		
 
 		FFmpegExecutor executor = new FFmpegExecutor(ffmpeg, ffprobe);
 

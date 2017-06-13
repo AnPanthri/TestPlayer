@@ -10,12 +10,12 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
- <video id="video" align="right"></video>
+ <video id="video" controls  preload="auto"></video>
 <script>
   if(Hls.isSupported()) {
     var video = document.getElementById('video');
     var hls = new Hls();
-     hls.loadSource("vids_v1/sample.m3u8"); //works
+     hls.loadSource("http://c-static-dev-int.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/b1f6952c-9603-4a57-bf3a-1f1db4e0cd3c?temp_url_sig=21fc4416876a43c195ff1f7028c214bb44526999&temp_url_expires=1497726627"); //works
 //	 hls.loadSource('http://copartmedia-vh.akamaihd.net/i/v1/AUTH_svc.ddoc00001/video-temp1/sample.mp4/master.m3u8');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
