@@ -1,0 +1,11 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
+#EXTINF:5.223222,
+http://c-static-dev-int.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/aafeff09-5feb-4ffc-8203-05db6898f814?temp_url_sig=bc57fc46d74a84535640dea3c9e18b928506821c&temp_url_expires=1497726064
+#EXTINF:6.280000,
+http://c-static-dev-int.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/b62c84fc-636f-4102-80fe-70aab30b1eac?temp_url_sig=6c62e2a5ec4e54646346d007f453a3a383c5bbd2&temp_url_expires=1497726122
+#EXTINF:7.640000,
+http://c-static-dev-int.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/f607b7ec-7f2f-4ef2-b149-185604842519?temp_url_sig=359810655279754c7a07f8f9cf3db1dc22a06dcc&temp_url_expires=1497726196
+#EXT-X-ENDLIST
