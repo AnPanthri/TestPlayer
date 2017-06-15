@@ -8,22 +8,29 @@
 </head>
 
 <body>
-  <script type="text/javascript">
-
-	</script> 
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <div id="myElement"></div>Loading the player...</div>
  <script type="text/javascript">jwplayer.key="sM5bwEzObqc1yEKsU/t0lEAzi45h9ulZEZetFA==";</script>  
   <script type="text/javascript">
    
  
 //jw code starts	   
-	       jwplayer("myElement").setup({
-	      		file:"http://c-static-dev.copart.com/v1/AUTH_svc.ddoc00001/video-temp/NEWIDS_RECORDING.mp4", 
-	      		width: "100%",
-	            aspectratio: "9:16"
+	      /*  jwplayer("myElement").setup({
+	      		file:"http://c-static-dev-int.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/be16275d-b50a-4b6d-b9ed-5f3f46cd4ba7?temp_url_sig=d0547303cd97c6760f579db47ec167fb7bca860a&temp_url_expires=1497906139", 
+	      		type:"hls",
+	      		image: "vid2/wrd.jpg",
+	      		width: "70%"
 	       });
-	       
-	
+	        */
+	       var playerInstance = jwplayer("myElement");
+	       playerInstance.setup({
+	           playlist: [{
+	               image: "vid2/wrd.jpg",
+	               sources: [{ 
+	                   file: "http://c-static-dev-int.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/be16275d-b50a-4b6d-b9ed-5f3f46cd4ba7?temp_url_sig=d0547303cd97c6760f579db47ec167fb7bca860a&temp_url_expires=1497906139"
+	               }]
+	           }],
+	       });
    
 </script>   
  
