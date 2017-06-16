@@ -18,7 +18,7 @@
   if(Hls.isSupported()) {
     var video = document.getElementById('video');
     var hls = new Hls();
-     hls.loadSource("http://c-static-dev-int.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/be16275d-b50a-4b6d-b9ed-5f3f46cd4ba7?temp_url_sig=d0547303cd97c6760f579db47ec167fb7bca860a&temp_url_expires=1497906139"); //works
+     hls.loadSource("http://c-static-dev.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/be16275d-b50a-4b6d-b9ed-5f3f46cd4ba7?temp_url_sig=d0547303cd97c6760f579db47ec167fb7bca860a&temp_url_expires=1497906139"); //works
 //	 hls.loadSource('http://copartmedia-vh.akamaihd.net/i/v1/AUTH_svc.ddoc00001/video-temp1/sample.mp4/master.m3u8');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {

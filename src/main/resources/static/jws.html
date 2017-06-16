@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JWPLAYER</title>
+<script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
+<script src="https://developer.jwplayer.com/js/developer.js"></script>
+<script type="text/javascript" src="https://developer.jwplayer.com/js/tools/stream-tester.js"></script>
+<script src="js/jwplayer/DbXZPMBQ.js"></script>
+</head>
+
+<body>
+	<div id="myElement"></div>
+	</div>
+	<script type="text/javascript">jwplayer.key="sM5bwEzObqc1yEKsU/t0lEAzi45h9ulZEZetFA==";</script>
+	<script type="text/javascript">
+	 var playerInstance = jwplayer("myElement");
+     playerInstance.setup({
+				    		   playlist : [
+				    		    {
+				    		     	
+				    		       image : "vid2/wrd.jpg",
+				    		       sources : [
+				    		        {
+				    		           file : "http://c-static-dev.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/be16275d-b50a-4b6d-b9ed-5f3f46cd4ba7?temp_url_sig=d0547303cd97c6760f579db47ec167fb7bca860a&temp_url_expires=1497906139",
+				    		           type : "hls",
+				    		           label : "0",
+				    		           preload : "none",
+				    		           width : "50%"
+				    		        }
+				    		      ]
+				    		    }
+				    		  ],
+				    		   primary : "html5",
+				    		   hlshtml : true
+			});
+</script>
+
+</body>
+
+</html>
