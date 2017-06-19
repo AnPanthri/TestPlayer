@@ -5,15 +5,9 @@
 <head>
    <meta charset="utf-8">
 
-   <title>Flowplayer hlsjs plugin · Standalone demo · Flowplayer</title>
-
-   <!-- optimize mobile versions -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <!-- The Flowplayer skin -->
+   <title>Flowplayer</title>
    <link rel="stylesheet" href="http://releases.flowplayer.org/7.0.4/skin/skin.css">
 
-   <!-- Minimal styling for this standalone page (can be removed) -->
    <style>
    body {
       font-family: "myriad pro", tahoma, verdana, arial, sans-serif;
@@ -28,26 +22,15 @@
    }
    
 </style>
-
-   <!-- CSS for this demo Embedded the poster image in CSS -->
    <link rel="stylesheet" href="css/hlscss.css">
-   
-   
-   <!-- Flowplayer-->
-   <script src="js/flowplayer/flowplayer.min.js"></script>
-
-   <!-- recommended: the hlsjs engine plugin -->
+ <!--   <script src="js/flowplayer/flowplayer.min.js"></script>   -->
+    <script src="js/flowplayer/flowplayer-3.2.13.min.js"></script>  
    <script src="http://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script>
-
-
-
 </head>
 
 <body>
 <div id="content">
-
 <div id="fp-hlsjs"></div>
-
 <script>
 flowplayer("#fp-hlsjs", {
     splash: true,
@@ -70,10 +53,8 @@ flowplayer("#fp-hlsjs", {
            // api.engine.engineName + " engine playing " + video.type;
 
 });
+
 </script>
-
-
 </div> 
 </body>
-
 </html>

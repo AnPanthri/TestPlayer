@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html>
@@ -5,49 +6,55 @@
 <head>
    <meta charset="utf-8">
 
-   <title>FLOWPLAYER</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="http://releases.flowplayer.org/7.0.4/skin/skin.css">
-   <style>
-   body  
+      <title>Flowplayer · HLS support</title>
    
+   <!-- optimize mobile versions -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+      <!-- Flowplayer skin -->
+   <link rel="stylesheet" href="//releases.flowplayer.org/7.0.4/skin/skin.css">
+   
+   <!-- Minimal styling for this standalone page, can be removed -->
+   <link rel="stylesheet" href="http://demos.flowplayer.org/media/css/demo.css">
+   <!-- Syntax highlighting of source code, can be removed -->
+   <link rel="stylesheet" href="http://demos.flowplayer.org/media/css/pygments.css">
+   
+<style>
+.flowplayer {
+  background-color: #bbb;
+}
 </style>
-   <link rel="stylesheet" href="css/hlscss.css">
-   <script src="js/flowplayer/flowplayer.min.js"></script>
-   <script src="http://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script>
 
-</head>
- 
- <div class="player">
-   <video>
-      <source type="application/x-mpegurl" src="http://c-static-dev.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/be16275d-b50a-4b6d-b9ed-5f3f46cd4ba7?temp_url_sig=d0547303cd97c6760f579db47ec167fb7bca860a&temp_url_expires=1497906139">
-   </video>
-</div>
- 
+      <!-- Flowplayer depends on jquery 1.7.2+ for video tag based installations -->
+   <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+         <!-- Flowplayer library -->
+   <script src="http://releases.flowplayer.org/7.0.4/flowplayer.min.js"></script>
+                  
+   
 <script>
-// run script after document is ready
-$(function () {
- 
-   // install flowplayer into all elements with CSS class="player"
-   $(".player").flowplayer();
- 
+// display information about the video type
+flowplayer(function (api) {
+  api.on("load", function (e, api, video) {
+    $("#vinfo").text(api.engine.engineName + " engine playing " + video.type);
+  });
 });
 </script>
- 
- 
- 
- 
- 
- 
- 
- 
+
+</head>
+
 <body>
-<div id="content">
 
+   <div id="content">
 
- 
+      <h1>Flowplayer · HLS support</h1>
 
-</div> 
+<div class="flowplayer" data-ratio="0.5625">
+
+  <video>
+      <source type="application/x-mpegurl" src="https://tinyurl.com/ya6kbs5f">
+   </video>
+
+</div>
+
 </body>
-
 </html>

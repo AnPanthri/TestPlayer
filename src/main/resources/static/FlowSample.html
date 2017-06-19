@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Flowplayer</title>
+   <link rel="stylesheet" href="http://releases.flowplayer.org/7.0.4/skin/skin.css">
+   <link rel="stylesheet" href="css/hlscss.css">
+  <script src="js/flowplayer/jquery-1.12.4.min.js"></script>   
+    <script src="js/flowplayer/flowplayer-3.2.13.min.js"></script>  
+   <script src="http://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script>
+</head>
+<body>
+<script>
+flowplayer.conf = {
+		   fullscreen: true,
+		   // iOS allows only native fullscreen from within iframes
+		   native_fullscreen: true
+		 };
+</script>
+
+
+<div id="content">
+
+<div class="flowplayer" data-live="false" data-ratio="0.5625" >
+ 
+ <video data-title="CopartStream">
+  <source type="application/x-mpegurl"
+        src="http://c-static-dev.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/be16275d-b50a-4b6d-b9ed-5f3f46cd4ba7?temp_url_sig=d0547303cd97c6760f579db47ec167fb7bca860a&temp_url_expires=1497906139">
+   <!-- <source type="video/mp4" src="http://c-static-dev.copart.com/v1/AUTH_svc.ddoc00001/video-temp/NEWIDS_RECORDING.mp4"> -->
+   </video>
+</div>
+</div>
+
+ 
+
+
+
+
+
+</body>
+</html>
