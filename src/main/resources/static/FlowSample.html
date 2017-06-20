@@ -1,53 +1,49 @@
 <!doctype html>
 <html>
 <head>
-   <meta charset="utf-8">
-   <title>Flowplayer</title>
-   <link rel="stylesheet" href="http://releases.flowplayer.org/7.0.4/skin/skin.css">
-   <link rel="stylesheet" href="css/hlscss.css">
-  <script src="js/flowplayer/jquery-1.12.4.min.js"></script>   
-    <script src="js/flowplayer/flowplayer-3.2.13.min.js"></script>  
-   <script src="http://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script>
-
-</head>
-<body>
-<script type="text/javascript">
-    function getUrl() {
-      pass_url= url.value;
-      var video = document.getElementById('video');
-      var source = document.createElement('source');
-
-      source.setAttribute('src', pass_url);
-	  source.setAttribute('type', 'video/mp4' );
-      video.appendChild(source);
-      video.play();
-    
-    }
-</script>
+<meta charset="utf-8">
+<title>Flowplayer</title>
+<link rel="stylesheet"
+	href="http://releases.flowplayer.org/7.0.4/skin/skin.css">
+<link rel="stylesheet" href="css/hlscss.css">
+<script src="js/flowplayer/jquery-1.12.4.min.js"></script>
+<script src="js/flowplayer/flowplayer-3.2.13.min.js"></script>
+<script
+	src="http://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script>
 <script>
+var url;
+function opt(){
+	 url=window.frameElement.value;
+	 /* document.getElementById("video1").src=url;
+	 document.getElementById("video1").play(); */
+}
+
 flowplayer.conf = {
 		   fullscreen: true,
 		   // iOS allows only native fullscreen from within iframes
 		   native_fullscreen: true
 		 };
 </script>
+</head>
+<body>
 
-<input type=text id ="url" value=""/>
- <input type=button  value="Submit" onclick= "getUrl()" />
 
-<div id="content">
-<div class="flowplayer" data-live="false" data-ratio="0.5625" >
- <video data-title="CopartStream" id="video"  width="320" height="240">
-   </video>
-  <!-- <source type="application/x-mpegurl"
-        src="http://c-static-dev.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/be16275d-b50a-4b6d-b9ed-5f3f46cd4ba7?temp_url_sig=d0547303cd97c6760f579db47ec167fb7bca860a&temp_url_expires=1497906139">
-   <source type="video/mp4" src="http://c-static-dev.copart.com/v1/AUTH_svc.ddoc00001/video-temp/NEWIDS_RECORDING.mp4">
-   --> 
- 
-</div>
-</div>
 
- 
+	<!-- <input type=button  value="PlayVideo" onclick= "p()" /> -->
+
+	<div id="content">
+		<div class="flowplayer" data-live="false" data-ratio="0.5625">
+			<video data-title="CopartStream" id="video1" width="320" height="240">
+				<!-- <source type="application/x-mpegurl"> -->
+			 <source type="application/x-mpegurl" src="http://c-static-dev.copart.com/v1/AUTH_G1_Dev/VIDEO_TEMP2/be16275d-b50a-4b6d-b9ed-5f3f46cd4ba7?temp_url_sig=d0547303cd97c6760f579db47ec167fb7bca860a&temp_url_expires=1497906139" />  
+			</video>
+
+
+		</div>
+	</div>
+
+
+
 
 
 
