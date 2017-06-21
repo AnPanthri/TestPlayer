@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+
+<head>
+   <meta charset="utf-8">
+
+   <title>Flowplayer</title>
+   <link rel="stylesheet" href="http://releases.flowplayer.org/7.0.4/skin/skin.css">
+
+   <style>
+   body {
+      font-family: "myriad pro", tahoma, verdana, arial, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+   }
+   #content {
+      margin: 50px auto;
+      max-width: 482px;
+      max-heigth:500px;
+   }
+   
+</style>
+   <link rel="stylesheet" href="css/hlscss.css">
+ <!--   <script src="js/flowplayer/flowplayer.min.js"></script>   -->
+    <script src="js/flowplayer/flowplayer-3.2.13.min.js"></script>  
+   <script src="http://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script>
+</head>
+
+<body>
+<div id="content">
+<div id="fp-hlsjs"></div>
+<script>
+var url;
+url=window.frameElement.value;
+flowplayer("#fp-hlsjs", {
+    splash: true,
+    ratio: 9/16,
+
+    // optional: HLS levels offered for manual selection
+    hlsQualities: [-1, 1, 3, 6],
+
+    clip: {
+        title: "...", // updated on ready
+        sources: [
+            { type: "application/x-mpegurl",
+              src:  url } 
+        ]
+    },
+    embed: false
+
+}).on("ready", function (e, api, video) {
+    document.querySelector("#fp-hlsjs .fp-title").innerHTML ="Copart";
+           // api.engine.engineName + " engine playing " + video.type;
+
+});
+
+</script>
+</div> 
+</body>
+</html>
